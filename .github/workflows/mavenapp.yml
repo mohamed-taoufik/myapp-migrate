@@ -31,4 +31,4 @@ jobs:
         name: myapp
         path: jar
     - name: Run jar file
-      run: java -jar myapp.jar
+      run: java -jar /home/runner/work/myapp-migrate/myapp-migrate/jar/myapp.jar
