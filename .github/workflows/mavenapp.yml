@@ -20,3 +20,8 @@ jobs:
       if: always()
       with:
         junit_files: "**/target/surefire-reports/*.xml"
+    - name: Upload jar file
+      uses: actions/upload-artifact@v2
+      with:
+        name: myapp
+        path:  /home/runner/work/myapp-migrate/myapp-migrate/target/myapp-1.0-SNAPSHOT.jar
