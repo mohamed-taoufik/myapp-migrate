@@ -1,5 +1,5 @@
 name: mvnapp/mavenapp
-on: workflow_dispatch
+on: [push] #workflow_dispatch
 #   # The shortest interval you can run scheduled workflows is once every 5 minutes.
 #   period: '180'
 jobs:
@@ -24,4 +24,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: myapp
-        path: /target/myapp-1.0-SNAPSHOT.jar
+        path: /home/runner/work/myapp-migrate/myapp-migrate/target/myapp-1.0-SNAPSHOT.jar
