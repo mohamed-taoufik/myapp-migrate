@@ -25,3 +25,10 @@ jobs:
       with:
         name: myapp
         path: /home/runner/work/myapp-migrate/myapp-migrate/target/myapp-1.0-SNAPSHOT.jar
+    - name: Download jar file
+      uses: actions/download-artifact@v2
+      with:
+        name: myapp
+        path: jar
+    - name: Run jar file
+      run: java -jar jar/myapp.jar
