@@ -28,7 +28,7 @@ jobs:
     - name: Download jar file
       uses: actions/download-artifact@v2
       with:
-        name: myapp-1.0-SNAPSHOT.jar
+        name: myapp
         path: jar
     - name: Run jar file
-      run: java -jar /target/myapp-1.0-SNAPSHOT.jar
+      run: java -jar myapp.jar
