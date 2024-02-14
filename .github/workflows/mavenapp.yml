@@ -29,6 +29,6 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: myapp
-        path: /home/runner/work/myapp-migrate/myapp-migrate/jar/
+        path: /home/runner/work/myapp-migrate/myapp-migrate/target/myapp.jar
     - name: Run jar file
-      run: java -jar jar/myapp.jar
+      run: java -jar /target/myapp.jar
