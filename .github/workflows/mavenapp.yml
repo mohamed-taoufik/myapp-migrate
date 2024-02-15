@@ -23,12 +23,12 @@ jobs:
     - name: Upload jar file
       uses: actions/upload-artifact@v2
       with:
-        name: myapp
+        name: myapp1
         path: /home/runner/work/myapp-migrate/myapp-migrate/target/myapp-1.0-SNAPSHOT.jar
     - name: Download jar file
       uses: actions/download-artifact@v2
       with:
-        name: myapp
-        path: jar/myapp.jar
+        name: myapp1
+        path: jar/myapp1.jar
     - name: Run jar file
-      run: java -jar jar/myapp.jar
+      run: java -jar **jar/myapp1.jar
