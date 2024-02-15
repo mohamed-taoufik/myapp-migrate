@@ -25,8 +25,13 @@ jobs:
     steps:
       - name: Create comment with api
         run: 
-         gh api --method POST /repos/mohamed-taoufik/myapp-migrate/issues/issue_number/comments \
-         -f boody = ' Here type new comment ' \
+          gh api --method POST /repos/mohamed-taoufik/myapp-migrate/issues \
+          --header "Accept:application/vnd.github+json" \
+          --header "X-GitHub-Api-Version:2022-11-28" \
+          -f title='Created with the REST API' \
+          -f body='This is a test issue created by the REST API' \
+        shell: bash
+
         env:
          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
          #ORGANIZATION: {{github.event.organisation.login}}
