@@ -14,7 +14,7 @@ jobs:
         distribution: zulu
         java-version: '11'
     - name: Run Maven
-      run: mvn package
+      run: mvn clean package
     - name: Publish test results
       uses: EnricoMi/publish-unit-test-result-action@v2.12.0
       if: always()
@@ -23,12 +23,12 @@ jobs:
     - name: Upload jar file
       uses: actions/upload-artifact@v2
       with:
-        name: myapp1
+        name: myapp
         path: /home/runner/work/myapp-migrate/myapp-migrate/target/myapp-1.0-SNAPSHOT.jar
     - name: Download jar file
       uses: actions/download-artifact@v2
       with:
-        name: myapp1
-        path: /home/runner/work/myapp-migrate/myapp-migrate/jar/myapp1.jar
+        name: myapp
+        path: jar/myapp.jar
     - name: Run jar file
-      run: java -jar /home/runner/work/myapp-migrate/myapp-migrate/jar/myapp1.jar
+      run: java -jar jar/myapp.jar
