@@ -25,7 +25,7 @@ jobs:
     steps:
       - name: Create comment with api
         run: 
-          gh api --method POST /repos/mohamed-taoufik/myapp-migrate/issues/123/comments -f body="This is a comment"
+          gh api --method POST /repos/mohamed-taoufik/myapp-migrate/issues/issue07/comments -f body="This is a comment"
         env:
          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
          #ORGANIZATION: {{github.event.organisation.login}}
