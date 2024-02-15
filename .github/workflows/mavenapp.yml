@@ -33,5 +33,5 @@ jobs:
     #- name: Run jar file
      # run: java -jar jar/myapp.jar
     - name: contents of your jar file
-      run: jar tf myapp.jar
+      run: jar tf jar/myapp.jar
 
